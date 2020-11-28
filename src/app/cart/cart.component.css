@@ -1,0 +1,55 @@
+.rowTable{
+  border-top:solid 1px rgb(167, 158, 158);
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.card ,.card-body{
+  border:0;
+}
+.btn-primary{
+ border-radius:0;
+}
+.Blue{
+  color:blue;
+  font-weight: bold;
+}
+.num{
+  font-weight: bold;
+  font-size:25px;
+}
+.close{
+ box-shadow: 0.1rem 0.1rem 0.25rem rgba(0,0,0,.25);
+ font-size: 12px;
+}
+.mobile{
+  display:none;
+}
+.desktop{
+  display: block;
+  color:blue;
+}
+.changer{
+  border:solid 1px blue;border-radius:0;
+}
+.rowdivider{
+  border-bottom: solid 1px black;
+}
+
+@media screen and  (max-width:740px){
+   .divider{
+     border-right: 1px  rgb(167, 158, 158) solid;
+     border-radius: 0;
+   }
+   .hider{
+     display: none;
+   }
+   .changer{
+     content:"X"
+   }
+   .desktop{
+     display: none;
+   }
+   .mobile{
+     display: block;
+   }
+}

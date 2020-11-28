@@ -1,0 +1,44 @@
+
+
+<div class="container">
+  <div class="row d-flex bd-highlight rowdivider" >
+    <div class="mr-auto p-2 bd-highlight"><b><i class="fas fa-less-than"></i> order list({{len}})</b></div>
+
+    <div class="p-2 bd-highlight"></div>
+    <div class="p-2 bd-highlight"><button class="btn btn-light changer" style="" ><span class="desktop">close</span><span class="mobile">X</span></button></div>
+  </div>
+
+    <div class="row d-flex">
+      <div class="mr-auto p-2 bd-highlight"></div>
+      <div class="p-2 bd-highlight"><i class="fa fa-sort"></i><span class="hider">Sort</span></div>
+      <div class="p-2 bd-highlight"><i class="fa fa-filter" aria-hidden="true"></i><span class="hider">Filter</span></div>
+    </div>
+
+
+  <div class="row rowTable border-1" *ngFor = "let cart of cartContent">
+    <div class="col-6 order-0 col-md-3  order-md-0">
+      <div class="card card-body">
+        <div  [innerHTML] = "cart.col1 | safeHtml"></div>
+      </div>
+
+    </div>
+    <div class="col-5 order-3 col-md-3  order-md-1 ">
+      <div class="card card-body divider">
+        <div class="" [innerHTML]="cart.col2|safeHtml"></div>
+      </div>
+
+    </div>
+    <div class="col-7 order-4 col-md-3  order-md-2">
+       <div class="card card-body">
+        <div  [innerHTML]="cart.col3|safeHtml"></div>
+       </div>
+
+    </div>
+    <div class="col-6 order-2 col-md-3  order-md-3 text-center">
+      <div class="card card-body">
+        <button class="btn btn-primary">{{cart.col4}}</button>
+      </div>
+
+    </div>
+  </div>
+</div>
